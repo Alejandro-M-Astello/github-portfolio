@@ -1,0 +1,321 @@
+/* Create a color pallet and set colors to values */
+
+/*Custom CSS variables using :root so that colors can be updated in s single place*/
+:root {
+  --bg-primary: #0f1117;
+  --bg-secondary: #161b22;
+  --bg-card: #1c2128;
+  --border-color: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --accent-color: #58a6ff;
+  --accent-hover: #79c0ff;
+}
+/*Reset  default browser margins/paddingand include the borders*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*Teleport to the sectionswhen clicking on the navbar*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/*Top Sticky Navigation Bar*/
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(22, 27, 34, 0.95);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
+}
+
+.nav-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  list-style: none; /*Don't actually display the bullet points.*/
+  display: flex; /*Display the links horizontally*/
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Hero Section (Home) */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-bottom: 1px solid var(--border-color);
+  color:#f0c040
+}
+
+/*For when I add a profile picture (ugh.)*/
+.profile-pic {
+  width: 170px;
+  height: 170px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 6px 6px 0px #f0c040;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.motto {
+    color: red;
+    font-weight: 600;
+}
+
+
+/* Main Container & Section Headings */
+main {
+  max-width: 1000px;    /*cap the width for better readability*/
+  margin: 0 auto;       /*Horizontally center the main column*/
+  padding: 2rem 1.5rem;
+}
+
+section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/*Don't actually put the bottom line divider*/
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 1.85rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent-color);
+  padding-left: 0.75rem;
+}
+
+/* Resume Section, Button & Highlights */
+.resume-actions {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #0f1117;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/*Change the color of this button when it is hovered over,
+and then goes back to its original color when not hovered over*/
+.btn:hover {
+  background-color: #3eff51;
+  color: #0f1117;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.resume-embed iframe {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  margin-bottom: 1.75rem;
+}
+
+.resume-details {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.resume-details h3 {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.resume-details h3:first-child {
+  margin-top: 0;
+}
+
+.resume-details p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Projects Grid & Cards */
+
+/*repeatedly display the grids depending on the screen width*/
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;            /*vertcle this time*/
+  flex-direction: column;
+  justify-content: space-between;       /*Place the project link at the bottom*/
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+/*color change when hovered over again*/
+.project-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* Skills Grid */
+
+/*repeatedly display the grid that changes depending on screen size.*/
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-category {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.skill-category h3 {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category li {
+  color: var(--text-secondary);
+  padding: 0.25rem 0;
+}
+
+/* Contact & Footer */
+.contact-links {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 680px) {
+  #navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+/*make it smaller because a phone screen is smaller*/
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

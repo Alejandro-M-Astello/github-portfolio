@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro M. Astello | Aspiring Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--This will be the navigation area with where the links will be.-->
+    <nav id="navbar">
+        <div class="nav-brand"> Alejandro M. Astello</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!--This will be the home page/ Hero Section of the website-->
+    <header id="home" class="hero">
+        <img src="assets/profile.jpg" alt="Alejandro M. Astello" class="profile-pic">
+        <h1>Alejandro Martinez Astello</h1>
+        <p class="subtitle">
+            B.S Computer Science <br>
+            Aspiring Developer <br>
+            <span class="motto">
+                All for Love! <br>
+                &hearts;
+            </span>
+        </p>
+    </header>
+
+    <main>
+        <!--This will be the about me section-->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello there. This is Alejandro Martinez Astello. I am currently a senior at Lamar University pursuing a B.S in Computer Science with a focus on Game Development. My expected graduation date is in 2027. I have gained experience in many aspects while attending this University that range from 3D model creation and Lighting & shading to various programming techniques such as socket programming. I have knowledge with several programming languages such as Java, C, C++, HTML, CSS, and Linux. I am also aware of technical concepts such as binary and the software development life cycle. While at University I have applied what I’ve learned to create various projects as well. I have a passion for learning new things about computer related topics. It is such a great feeling to learn a cool new technique or topic and put it to use, or finding out something new about something I thought I knew. I would love to expand my knowledge to creative fields such as 2D art and even dive into animation, whether that be in 2D or 3D. Software and web development also catch my eye, and it would be nice to put some focus there as well.  Video Games are such an important part of my life, and I have been playing them for as long as I can remember. Learning how they are made and being part of that process is one of my goals, whether it be part of a team or independently. Every day is a learning opportunity and a step towards my goal. 
+            </p>
+        </section>
+
+         <!--Resume Sections-->
+    <section id="resume">
+        <h2>Resume</h2>
+
+        <!--Download button-->
+        <div class="resume-actions">
+            <a href="assets/resume.pdf" download class="btn"> Download Resume (PDF)</a>
+        </div>
+
+        <!--embedded online Resume-->
+        <div class="resume-embed">
+            <iframe src="assets/resume.pdf" width="100%" height="600px" title="Alejandro M. Astello Resume" frameborder="0"></iframe>
+        </div>
+        <!--Structured HTML Resume Highlights-->
+        <div class="resume-details">
+            <h3>Education</h3>
+            <p><strong>B.S. in Computer Science with a focus on Game Development</strong> - Lamar University | Expected Graduation: 2027 | GPA: 3.4</p>
+
+            <h3>Technical Skills</h3>
+            <p>C++, C, Python, Java, HTML &amp; CSS, Linux/Unix, OpenGL, DirectX, Visual Studio, VS Code,  Lightwave 3D Modeler/Layout, Eclipse</p>
+
+            <h3>Experience</h3>
+            <p>Collaborative Software Development - Team Based Requirements Gathering, design, implementation, testing, debugging, and technical documentation.</p>
+
+            <h3>Certifications</h3>
+            <p>B.S. Computer Science (In Progress)</p>
+
+            <h3>Activities</h3>
+            <p>Member of the National Society of Collegiate scholars (NSCS)</p>
+        </div>
+
+    </section>
+    <!--Projects Section (Minimum 3 Projects) -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project 1: AI Project-->
+        <article class="project-card">
+          <img src="assets/project-ai.png" alt="AI Assistant Screenshot">
+          <h3>Local AI Study & Flashcard Assistant</h3>
+          <p class="project-desc">
+            Built an offline command line assistant that extracts text from lecture slide PDFs to generate structured Q&A flashcards
+            using a local Llama 3.2 model. Implemented an interactive quiz mode featuring real-time token streaming,
+             four selectable AI grader personas, and Leitner-style spaced repetition tracking.
+          </p>
+          <p class="tech-stack"><strong>Technologies:</strong> Python, Ollama (Llama 3.2), pydantic, pypdf, JSON</p>
+          <div class="project-links">
+            <a href="https://github.com/Alejandro-M-Astello/AIProjectG" target="_blank">GitHub Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 2: Real-Time 3D Game Environment -->
+        <article class="project-card">
+          <img src="assets/project-3dgame.png" alt="Real-Time 3D Game Environment Screenshot">
+          <h3>Real-Time 3D Game Environment</h3>
+          <p class="project-desc">
+            Created custom 3D models for real-time applications and utilized C++ with OpenGL and DirectX concepts within Visual Studio to develop a functional shooter-style game integrating custom and existing assets.
+          </p>
+          <p class="tech-stack"><strong>Technologies:</strong> C++, OpenGL, DirectX, LightWave Layout, Lightwave Modeler, Visual Studio</p>
+          <div class="project-links">
+            <a href="https://github.com/Alejandro-M-Astello/3D-Game-Environment" target="_blank">GitHub Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 3: Community Donation System -->
+        <article class="project-card">
+          <img src="assets/project-donation.png" alt="Community Donation System Screenshot">
+          <h3>Community Donation System</h3>
+          <p class="project-desc">
+            Developed software allowing community members to list items for donation. Implemented software features, performed debugging throughout development, and applied Software Development Lifecycle (SDLC) principles including planning, implementation, testing, and documentation.
+          </p>
+          <p class="tech-stack"><strong>Technologies:</strong> Software Development Lifecycle (SDLC), Debugging &amp; Testing</p>
+          <div class="project-links">
+            <a href="https://github.com/Alejandro-M-Astello/Community-Donation-System" target="_blank">GitHub Repo</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <!-- 5. Skills Section -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <ul>
+            <li>C++ &amp; C</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript, HTML &amp; CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Systems &amp; Graphics</h3>
+          <ul>
+            <li>Linux / Unix</li>
+            <li>OpenGL &amp; DirectX</li>
+            <li>LightWave 3D Modeler/Layout</li>
+          </ul>
+        </div>
+        
+        <div class="skill-category">
+            <h3>Concepts</h3>
+               <ul>
+                <li>Software Development Lifecycle (SDLC)</li>
+                <li>Object-Oriented Programming</li>
+                <li>Event-Driven Programming</li>
+                <li>Problem Solving and Debugging</li>
+            </ul>
+        </div>
+        
+
+        <div class="skill-category">
+          <h3>AI Tools</h3>
+          <ul>
+            <li>Microsoft Copilot</li>
+            <li>Gemini</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-links">
+        <li><strong>Email:</strong> <a href="mailto:alejandro.m.astello@gmail.com">alejandro.m.astello@gmail.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/Alejandro-M-Astello" target="_blank">github.com/Alejandro-M-Astello</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alejandro-martinez-astello-b0a9b8231" target="_blank">linkedin.com/in/alejandro-martinez-astello-b0a9b8231</a></li>
+
+      </ul>
+    </section>
+
+    </main>
+<footer>
+    <p>&copy; 2026 Alejandro Martinez Astello. Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+   <script src="script.js"></script>
+</body>
+</html>
